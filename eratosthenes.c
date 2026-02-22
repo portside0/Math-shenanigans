@@ -34,7 +34,7 @@ int main()
 	{	
 		if (prime[l] == true)
 		{
-			printf("%i - %i\n", m, l);
+			printf("%.4d ", l);
 			m++;
 		}
 	}
