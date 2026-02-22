@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -7,7 +8,13 @@ int main()
 	
 	scanf("%i", &n);
 	
-	bool prime[n + 1];
+	bool *prime = (bool *)malloc((n + 1) * sizeof(bool));
+	
+	if (prime == NULL)
+	{
+		printf("Memory allocation failed\n");
+		return 0;
+	}
 	
 	for (int i = 0; i <= n; i++)
 	{
@@ -40,4 +47,6 @@ int main()
 	}
 	
 	printf("\n");
+	
+	free(prime);
 }
