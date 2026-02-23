@@ -35,7 +35,7 @@ int main()
 	
 	if (choice == 'y')
 	{
-		dest = fopen("10000primes.txt", "w");
+		dest = fopen("primes_list.txt", "w");
 		
 		if (dest == NULL)
 		{
@@ -91,3 +91,4 @@ int main()
 
 	printf("Time elapsed: %lf\n", time);
 }
+
